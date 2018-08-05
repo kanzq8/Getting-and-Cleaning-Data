@@ -10,11 +10,11 @@ my_test_ref <- read.csv("C:\\Coursera\\Cleaning\\HAR Dataset\\UCI HAR Dataset\\t
 
 my_test_set <- cbind(my_test_set, my_test_act, my_test_ref)
 
-my_features <- read.csv("C:\\Coursera\\Cleaning\\HAR Dataset\\UCI HAR Dataset\\features.txt", sep = "", header = FALSE)
-
 my_data_set <- rbind(my_train_set, my_test_set)
 
 library(dplyr)
+
+my_features <- read.csv("C:\\Coursera\\Cleaning\\HAR Dataset\\UCI HAR Dataset\\features.txt", sep = "", header = FALSE)
 
 my_features <- rbind(my_features, cbind('562', 'Activity'), cbind('563', 'Subject'))
 
